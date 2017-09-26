@@ -1,12 +1,13 @@
 {
   "name": "@ianwremmel/eslint-config-base",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "@ianwremmel's preferred base lint rules",
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
     "pretest": "npm run lint",
-    "test": "eslint -c ./index.js ./test/main.js"
+    "test": "eslint -c ./index.js ./test/main.js",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "keywords": [],
   "author": "Ian W. Remmel <design@ianwremmel.com>",
@@ -16,10 +17,15 @@
     "url": "https://github.com/ianwremmel/eslint-config-base.git"
   },
   "devDependencies": {
+    "condition-circle": "^1.5.0",
     "eslint": "^4.7.2",
-    "eslint-plugin-mocha": "^4.11.0"
+    "eslint-plugin-mocha": "^4.11.0",
+    "semantic-release": "^8.0.3"
   },
   "peerDependencies": {
     "eslint-plugin-mocha": "^4.11.0"
+  },
+  "release": {
+    "verifyConditions": "condition-circle"
   }
 }
