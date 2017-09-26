@@ -5,7 +5,7 @@
 /* global Promise: false */
 
 var a = 5;
-var z;
+var y, z;
 
 switch (a) {
   case 1:
@@ -17,7 +17,7 @@ switch (a) {
 }
 
 Promise
-  .then();
+  .resolve();
 
 /**
  * @param {number} x
@@ -27,10 +27,24 @@ function f(x) {
   return x;
 }
 
-a.b();
-a.b()
+y = {
+  b: function b() {
+    return {
+      c: function c() {
+        return {
+          d: function d() {
+            return true;
+          }
+        };
+      }
+    };
+  }
+};
+
+y.b();
+y.b()
   .c();
-a.b()
+y.b()
   .c()
   .d();
 

@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint .",
     "pretest": "npm run lint",
-    "test": "eslint -c ./index.js ./test/main.js",
+    "test": "eslint -c ./index.js ./test/main.js && node ./test/example.js",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "keywords": [],
