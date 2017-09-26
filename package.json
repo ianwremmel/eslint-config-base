@@ -1,12 +1,12 @@
 {
   "name": "@ianwremmel/eslint-config-base",
   "version": "1.0.0",
-  "description": "",
+  "description": "@ianwremmel's preferred base lint rules",
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
-    "pretest": "npm run --silent lint",
-    "test": "eslint -c ./main.js ./test/main.js"
+    "pretest": "npm run lint",
+    "test": "eslint -c ./index.js ./test/main.js"
   },
   "keywords": [],
   "author": "Ian W. Remmel <design@ianwremmel.com>",
@@ -16,9 +16,10 @@
     "url": "https://github.com/ianwremmel/eslint-config-base.git"
   },
   "devDependencies": {
-    "eslint": "^4.7.2"
+    "eslint": "^4.7.2",
+    "eslint-plugin-mocha": "^4.11.0"
   },
-  "dependencies": {
+  "peerDependencies": {
     "eslint-plugin-mocha": "^4.11.0"
   }
 }
