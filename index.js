@@ -14,5 +14,8 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 5,
     sourceType: 'script'
-  }
+  },
+  plugins: [
+    'mocha'
+  ]
 };
