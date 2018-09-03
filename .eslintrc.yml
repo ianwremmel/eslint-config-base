@@ -1,6 +1,0 @@
-env:
-  node: true
-extends:
-  - './index.js'
-rules:
-  sort-keys: off
